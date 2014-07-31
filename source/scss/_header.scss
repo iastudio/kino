@@ -1,3 +1,114 @@
 header {
+  position: relative;
+  height: 680px;
+  // height: 100%;
 
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%; height: 17px;
+    left: 0; bottom: 0;
+    background-color: #EFEFEF;
+    @include background-image(linear-gradient(
+      left top,
+      #2B2B2B 25%,
+      transparent 25%,
+      transparent 50%,
+      #2B2B2B 50%,
+      #2B2B2B 75%,
+      transparent 75%,
+      transparent)
+    );
+    background-size: 45px 45px;
+  }
+
+  .header__left, .header__right {
+    width: 50%; height: 100%;
+    float: left;
+    position: relative;
+    background-color: #FFCA2B;
+
+    &.header__left {
+      background-color: #FFCA2B;
+
+      .header__section {
+        background-color: #993141;
+        border-color: #F8BF2D;
+
+        &:before {
+          top: -45px; left: -76px;
+          width: 426px; height: 350px;
+          background: url('../i/section-video.png') 0 0 no-repeat;
+        }
+      }
+    }
+
+    &.header__right {
+      background-color: #993242;
+
+      .header__section {
+        background-color: #FFCA2B;
+        border-color: #A03A3F;
+
+        &:before {
+          top: -42px; left: -18px;
+          width: 377px; height: 348px;
+          background: url('../i/section-photo.png') 0 0 no-repeat;
+        }
+      }
+    }
+
+    .header__section {
+      display: block;
+      width: 456px; height: 456px;
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-top: -228px;
+      margin-left: -228px;
+      @include border-radius(1000px);
+      @include background-clip(padding-box);
+      background-color: #993141;
+      border: 75px solid;
+      @include transition(all .3s ease);
+      opacity: .9;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+      }
+    }
+
+  }
+
+
+  .header__logo {
+    display: block;
+    position: absolute;
+    top: 22px; left: 50%;
+    margin-left: -120px;
+    width: 240px; height: 235px;
+
+    #kino {
+      // cursor: pointer;
+
+      #kino_top {
+        // transform-origin: 5px 56px;
+        transform-origin: 0 73px;
+        transform: rotate(0deg);
+        @include transition(all .5s cubic-bezier(0.95, 0.05, 0.795, 0.035));
+      }
+
+      &:hover {
+        #kino_top {
+          transform: rotate(9.8deg);
+        }
+      }
+    }
+  }
 }

@@ -32,10 +32,14 @@
 	box-sizing: border-box;
 }
 
+html, body, .page-wrap {
+  height: 100%;
+}
+
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	background: $bg-color;
-	line-height: 150%;
+	line-height: 1.2;
 	font-size: $text-size;
 
 	min-width: 960px;
@@ -62,11 +66,14 @@ h1, h2, h3, h4, h5, p {
 }
 
 h1, h2, h3, h4, h5 {
-	font-weight: bold;
+	// font-weight: bold;
 }
 
 h1 {
+  font-family: 'PT Sans', sans-serif;
 	font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 h2 {
