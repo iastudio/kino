@@ -1,3 +1,7 @@
+.no-svg .header__logo {
+  background: url('../i/logo.png') 0 0 no-repeat !important;
+}
+
 header {
   position: relative;
   height: 680px;
@@ -39,7 +43,8 @@ header {
         &:before {
           top: -45px; left: -76px;
           width: 426px; height: 350px;
-          background: url('../i/section-video.png') 0 0 no-repeat;
+          @include background-image-retina('../i/section-video', 'png', 426px, 350px);
+          // background: url('../i/section-video.png') 0 0 no-repeat;
         }
       }
     }
@@ -54,7 +59,8 @@ header {
         &:before {
           top: -42px; left: -18px;
           width: 377px; height: 348px;
-          background: url('../i/section-photo.png') 0 0 no-repeat;
+          @include background-image-retina('../i/section-photo', 'png', 377px, 348px);
+          // background: url('../i/section-photo.png') 0 0 no-repeat;
         }
       }
     }
