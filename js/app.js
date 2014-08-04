@@ -1,5 +1,69 @@
 
 (function(){
+
+  $('.carousel .carousel__item').on('click', function(e) {
+    e.preventDefault();
+    $('.carousel .carousel__item.active').removeClass('active');
+    $(this).addClass('active');
+    var href = $(this).find('a').attr('href');
+    $("#featured-content").html('<i class="preloader fa fa-refresh fa-spin"></i>');
+    setTimeout(function(){
+      $("#featured-content").load(href);
+    }, 1000);
+  });
+
+  /////////////////
+  //   CAROUSEL  //
+  /////////////////
+
+  var carouselSlideSpeed = 500;
+  var carouselEasing = 'easeInOutQuad';
+
+  if ( $('.carousel .carousel__item').length > 6 ) {
+    $('.carousel').each(function(){
+      var $carousel = $(this);
+      $carousel.find('ul li:last-child').prev('li').andSelf().prependTo( $carousel.find('ul') );
+      var itemCount = $carousel.find('.carousel__item').length;
+      var itemHeight = $carousel.find('.carousel__item').eq(0).outerHeight() + 10;
+      //var totalWidth = itemCount * itemWidth;
+      // $carousel.find('ul').css({ width: totalWidth, marginLeft: - itemWidth });
+      $carousel.find('ul').css({ marginTop: - itemHeight });
+    });
+  } else {
+    $('.carousel__nav').hide();
+  }
+
+  $('.carousel__nav').on('click', function(e) {
+
+    e.preventDefault();
+
+    var $carousel = $(this).parent();
+    var itemHeight = $carousel.find('.carousel__item').eq(0).outerHeight();
+
+    if ($carousel.find('ul:animated').size() > 0) return;
+
+    var direction;
+
+    $(this).hasClass('carousel__nav--next') ? direction = 1 : direction = 0;
+
+    if (direction == 1) {
+      $carousel.find('ul').animate({
+          top: - itemHeight - 10
+      }, carouselSlideSpeed, carouselEasing, function () {
+          $carousel.find('ul li:first-child').next('li').andSelf().appendTo( $carousel.find('ul') );
+          $carousel.find('ul').css('top', '');
+      });
+    } else {
+      $carousel.find('ul').animate({
+          top: + itemHeight + 10
+      }, carouselSlideSpeed, carouselEasing, function () {
+          $carousel.find('ul li:last-child').prev('li').andSelf().prependTo( $carousel.find('ul') );
+          $carousel.find('ul').css('top', '');
+      });
+    }
+
+  });
+
 })();
 
 	/////////////////
