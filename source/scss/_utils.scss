@@ -1,3 +1,21 @@
+@mixin perspective-shadow($color, $length){
+  $shadow: '';
+  @for $i from 0 to $length - 1 {
+    $shadow: $shadow + '0 ' + $i*2 + 'px 0 ' + $i*-1 + 'px ' + $color + ',';
+  }
+  $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba(0,0,0,0);
+  box-shadow: unquote($shadow);
+}
+
+@mixin perspective-shadow-custom($color, $length){
+  $shadow: '';
+  @for $i from 0 to $length - 1 {
+    $shadow: $shadow + '0 ' + $i*2 + 'px 0 ' + $i*-1 + 'px ' + $color + ',';
+  }
+  $shadow: $shadow + '0 40px 80px -20px rgba(133,138,155,1)';
+  box-shadow: unquote($shadow);
+}
+
 /* mixin for retina background images */
 @mixin background-image-retina($file, $type, $width, $height) {
   background-image: url($file + '.' + $type);

@@ -8,6 +8,71 @@ html(lang='ru').no-js
   body
     .page-wrap
       include includes/header
-      main
+      main.container.content.featured
+        .featured__left
+          h1 Новые работы
+          #featured-content
+            a(href="#")
+              img.video(src="i/placeholders/1.jpg")
+            h3 Презентация строящегося угольного терминала под г. Находка
+            p Закажите у нас видеоролик и Вы получите готовый профессиональный продукт, который будет продвигать Ваш бизнес! Сделайте у нас презентационный фильм и в глазах партнеров Вы подниметесь на новую высоту!
+        .featured__right
+          .carousel
+            .carousel__container
+              ul
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-1.jpg")
+                    .carousel__item__desc Новогодняя<br>рассрочка
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-2.jpg")
+                    .carousel__item__desc Рекламный ролик<br>для Роял Бургер
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-3.jpg")
+                    .carousel__item__desc "Метлой поганой" -<br>"По морям"
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-4.jpg")
+                    .carousel__item__desc Новогодняя<br>рассрочка
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-5.jpg")
+                    .carousel__item__desc Рекламный ролик<br>для Роял Бургер
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-6.jpg")
+                    .carousel__item__desc "Метлой поганой" -<br>"По морям"
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-1.jpg")
+                    .carousel__item__desc Новогодняя<br>рассрочка
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-2.jpg")
+                    .carousel__item__desc Рекламный ролик<br>для Роял Бургер
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-3.jpg")
+                    .carousel__item__desc "Метлой поганой" -<br>"По морям"
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/placeholder-4.jpg")
+                    .carousel__item__desc Новогодняя<br>рассрочка
+            a.carousel__nav.carousel__nav--prev(href='#')
+              i.fa.fa-angle-up
+            a.carousel__nav.carousel__nav--next(href='#')
+              i.fa.fa-angle-down
       include includes/footer
     include includes/tail

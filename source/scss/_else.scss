@@ -1,0 +1,39 @@
+.content {
+  margin-top: 65px;
+  margin-bottom: 100px;
+  @include perspective-shadow-custom(darken(#C7C7CE, 5%), 15);
+  background-color: #f5f4f1;
+  height: 550px;
+}
+
+.featured {
+  .featured__left {
+    @include span(7/12);
+    padding: 35px 45px 35px 55px;
+    background-color: #ffcb71;
+    @include background-image(linear-gradient(to right, #ffcb71 0%, #ffcb71 94.75%, #ffebc9 100%));
+    height: 100%;
+    position: relative;
+
+    .video {
+      margin-bottom: 18px;
+    }
+  }
+  .featured__right {
+    @include span(5/12);
+    height: 100%;
+  }
+}
+
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px; height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  @include text-shadow(0 1px 0 rgba(255,231,189,.75));
+}

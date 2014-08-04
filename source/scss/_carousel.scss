@@ -1,0 +1,107 @@
+.touch .carousel .carousel__container {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel {
+  width: 100%; height: 100%;
+  padding: 50px 40px;
+  position: relative;
+
+  .carousel__container {
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    height: 9999px;
+    list-style: none;
+    list-style-type: none;
+    padding-left: 0 !important;
+    position: relative;
+    //margin: 0 !important;
+
+    li.carousel__item {
+      @include col(1/2, $cycle: 2);
+      margin-bottom: 10px;
+      height: 140px;
+      // padding: 0;
+      // list-style: none;
+      // list-style-type: none;
+      // float: left;
+      // padding: 0 10px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      // margin-left: 0 !important;
+
+      .carousel__item__pic {
+        @include transition(all 0.3s ease-in-out);
+        width: 140px;
+        height: 90px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        overflow: hidden;
+
+        border: 7px solid transparent;
+
+        img {
+          height: 90px;
+          width: auto;
+          position: relative;
+          z-index: -1;
+        }
+      }
+
+      &:hover, &.active {
+        .carousel__item__pic {
+          border-color: #e5af52;
+          @include box-shadow(inset 0 0 16px rgba(0,0,0,.75));
+        }
+      }
+
+      .carousel__item__desc {
+        color: #009bff;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+    }
+  }
+
+  a.carousel__nav {
+    width: 40px; height: 40px;
+    background-color: #993141;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 1;
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+
+    @include transition(all 0.2s ease-in-out);
+
+    &:hover {
+      background-color: lighten(#993141, 10%);
+    }
+
+    &.carousel__nav--prev{
+      top: 0;
+    }
+
+    &.carousel__nav--next {
+      bottom: 0;
+    }
+  }
+}

@@ -2,6 +2,13 @@
   background: url('../i/logo.png') 0 0 no-repeat !important;
 }
 
+@media (max-width: 1250px) {
+  .header__logo {
+    transform: scale(0.7);
+    top: -10px !important;
+  }
+}
+
 header {
   position: relative;
   height: 680px;

@@ -1,4 +1,39 @@
 footer {
 
+  height: 100px;
+  padding-top: 30px;
+  border-top: 1px solid #CCCCCC;
+
+  .footer__counter {
+    @include span(5/12);
+  }
+  .footer__contacts {
+    @include span(3/12);
+    h1 {
+      font-family: sans-serif;
+      font-size: 20px;
+      font-weight: normal;
+      color: #352100;
+      text-shadow: none;
+      line-height: 1;
+      margin-bottom: 0;
+    }
+    small {
+      color: #352100;
+      font-size: 12px;
+    }
+  }
+  .footer__copy {
+    @include span(4/12);
+    text-align: right;
+    color: #352100;
+    font-size: 12px;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 

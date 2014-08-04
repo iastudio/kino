@@ -21,6 +21,7 @@
 // Misc
 @import "forms";
 @import "lightbox";
+@import "carousel";
 
 // Elements
 @import "header";
@@ -41,7 +42,7 @@ body {
 	background: $bg-color;
 	line-height: 1.2;
 	font-size: $text-size;
-
+  color: #352200;
 	min-width: 960px;
 }
 
@@ -61,7 +62,7 @@ a[href^=tel]{
 }
 
 h1, h2, h3, h4, h5, p {
-	color: #000;
+	//color: #000;
 	margin-bottom: 18px;
 }
 
@@ -74,6 +75,7 @@ h1 {
 	font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
+  @include text-shadow(0 1px 0 rgba(255,231,189,.75));
 }
 
 h2 {
@@ -82,10 +84,11 @@ h2 {
 
 h3 {
 	font-size: 16px;
+  font-weight: 600;
 }
 
 p {
-	line-height: 150%;
+
 }
 
 strong {
