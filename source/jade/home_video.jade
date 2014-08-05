@@ -1,0 +1,131 @@
+- var active = 1
+- var pageName = 'Видеостудия'
+include includes/settings
+doctype html
+html(lang='ru').no-js
+  head
+    include includes/head
+  body.page-video
+    .page-wrap
+      include includes/header
+      .container.center
+        h1.wave Видеостудия
+        p «Фабрика кино» - это компания, которая создана, чтобы снимать кино, чтобы превращать в фильм все, что происходит вокруг нас, показывать историю любого товара или услуги.  Мы превратим в кино все: от слайд-шоу до постановочного ролика.
+      main.container.content
+        .content-nav
+          nav
+            ul
+              li: a(href="#") Главная
+              li: a(href="#") Наши работы
+              li: a(href="#") Услуги
+              li: a(href="#") Проекты
+              li: a(href="#") Оборудование
+              li: a(href="#") Контакты
+        .carousel--alt
+          h1 Новые работы
+          .carousel__container__item.active
+            ul
+              .row
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/1.jpg")
+                    .carousel__item__desc Carte Noire. Рекламная фотосъемка.
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/2.jpg")
+                    .carousel__item__desc Carte Noire. Рекламная фотосъемка натюрморта. Фотосъемка напитка
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/3.jpg")
+                    .carousel__item__desc Pies. Фотосъемка рекламы для сайта и буклета компании.
+              .row
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/4.jpg")
+                    .carousel__item__desc Фотосъемка продуктов для упаковки. Сыр моццарелла.
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/5.jpg")
+                    .carousel__item__desc "Paco Rabanne" for L'Officiel Magazine (February 2013)
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/6.jpg")
+                    .carousel__item__desc Закажите у нас видеоролик и Вы получите готовый профессиональный
+              .row
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/7.jpg")
+                    .carousel__item__desc Pies. Фотосъемка рекламы для сайта и буклета компании.
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/8.jpg")
+                    .carousel__item__desc Закажите у нас видеоролик и Вы получите готовый профессиональный
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/9.jpg")
+                    .carousel__item__desc Закажите у нас видеоролик и Вы получите готовый профессиональный
+          .carousel__container__item
+            ul
+              .row
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/2.jpg")
+                    .carousel__item__desc Pies. Фотосъемка рекламы для сайта и буклета компании.
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/4.jpg")
+                    .carousel__item__desc Закажите у нас видеоролик и Вы получите готовый профессиональный
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/6.jpg")
+                    .carousel__item__desc "Paco Rabanne" for L'Officiel Magazine (February 2013)
+              .row
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/9.jpg")
+                    .carousel__item__desc Carte Noire. Рекламная фотосъемка.
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/8.jpg")
+                    .carousel__item__desc "Paco Rabanne" for L'Officiel Magazine (February 2013)
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/7.jpg")
+                    .carousel__item__desc "Метлой поганой" - "По морям"
+              .row
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/3.jpg")
+                    .carousel__item__desc Carte Noire. Рекламная фотосъемка.
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/2.jpg")
+                    .carousel__item__desc Рекламный ролик для Роял Бургер
+                li.carousel__item
+                  a(href="content.html")
+                    .carousel__item__pic
+                      img(src="i/placeholders/gallery/1.jpg")
+                    .carousel__item__desc "Метлой поганой" - "По морям"
+          a.carousel__nav.carousel__nav--prev(href='#')
+            i.fa.fa-angle-left
+          a.carousel__nav.carousel__nav--next(href='#')
+            i.fa.fa-angle-right
+      include includes/footer
+    include includes/tail

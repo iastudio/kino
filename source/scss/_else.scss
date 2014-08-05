@@ -1,9 +1,45 @@
 .content {
-  margin-top: 65px;
+  margin-top: 60px;
   margin-bottom: 100px;
-  @include perspective-shadow-custom(darken(#C7C7CE, 5%), 15);
+  @include perspective-shadow-custom(darken(#C7C7CE, 5%), 15, '0 40px 80px -20px rgba(133,138,155,1)');
   background-color: #f5f4f1;
   height: 550px;
+}
+
+.content-nav {
+  background-color: #fff;
+  overflow: hidden;
+  nav {
+    ul {
+      li {
+        float: left;
+        a {
+          color: #352100;
+          font-size: 12px;
+          display: block;
+          height: 60px;
+          line-height: 60px;
+          //padding: 0 40px;
+          margin: 0 40px;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+        &.active a, a:hover {
+          position: relative;
+          &:after {
+            display: block;
+            position: absolute;
+            content: ' ';
+            width: 100%;
+            height: 2px;
+            background-color: #993242;
+            bottom: 15px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 .featured {
@@ -37,3 +73,207 @@
   margin-left: -25px;
   @include text-shadow(0 1px 0 rgba(255,231,189,.75));
 }
+
+body {
+  &.page-video {
+    background-color: #FFCA2B;
+    .content {
+      @include perspective-shadow-custom(#C48F07, 15, '0 40px 80px -20px #775506');
+      background-color: #FFCB71;
+      height: 900px;
+    }
+  }
+  &.page-photo {
+    background-color: #993242;
+    a, p, h2, h3, h4, h5 {
+      color: #FFF;
+    }
+    .content {
+      @include perspective-shadow-custom(#5E050C, 15, '0 40px 80px -20px #361116');
+      background-color: #FFCB71;
+      height: 900px;
+    }
+  }
+}
+
+
+h1.wave {
+  color: #993241;
+  font-family: "PT Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  background-color: #fff;
+  margin-top: 90px;
+  margin-bottom: 30px;
+  display: inline-block;
+  padding: 0 10px;
+  &:before {
+    display: block;
+    position: absolute;
+    content: ' ';
+    height: 6px;
+    background: transparent url("../i/wave.svg") 0 center repeat-x;
+    width: 100%;
+    left: 0;
+    margin-top: 25px;
+    z-index: -1;
+  }
+}
+
+.page-inner {
+  h1.wave {
+    margin-top: 55px;
+  }
+}
+
+
+.col-1-2 {
+  @include col(1/2);
+}
+
+
+.portfolio {
+  .portfolio__item {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 40px;
+    @include col(1/2, $cycle: 2);
+    img {
+      margin-bottom: 30px;
+    }
+    h3 {
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+.pagination {
+  display: block;
+  ul {
+    li {
+      float: left;
+      margin-right: 5px;
+      a {
+        display: block;
+        width: 27px;
+        height: 27px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 28px;
+      }
+      &.active a, a:hover {
+        background-color: #993242;
+        color: #FFF;
+      }
+    }
+  }
+}
+
+.page-photo {
+  .pagination {
+    ul li {
+      &.active a, a:hover {
+        background-color: #FFCA2B;
+        color: #352200;
+      }
+    }
+  }
+}
+
+.gallery {
+  margin-bottom: 45px;
+  .gallery__container {
+    @include cf();
+    margin-bottom: 29px;
+  }
+  .gallery__item {
+    display: block;
+    @include col(1/4);
+    height: 150px;
+    overflow: hidden;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.schedule {
+  .schedule__info {
+    @include col(8/12);
+    min-height: 210px;
+    background-color: #892B3A;
+    padding: 28px 19px;
+    ul {
+      li {
+        color: #FFF;
+        a {
+          display: inline-block;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .schedule__cal {
+    @include col(4/12);
+    min-height: 210px;
+    background-color: #892B3A;
+    padding: 20px 25px;
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+
+      color: #FFF;
+
+      thead {
+        text-transform: uppercase;
+      }
+
+      td {
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        width: 33px;
+        padding: 0 8px;
+        cursor: pointer;
+
+        margin: 1px;
+      }
+
+      tbody {
+
+        td:hover, .current-day {
+          background-color: #993242;
+
+          &.empty {
+            background-color: transparent;
+            cursor: default;
+          }
+        }
+
+        .event {
+          cursor: pointer;
+          position: relative;
+
+          &:after {
+            background: #FFF;
+            border-radius: 50%;
+            bottom: 0;
+            display: block;
+            content: '';
+            height: 4px;
+            left: 50%;
+            margin-left: 0;
+            position: absolute;
+            width: 4px;
+          }
+
+        }
+      }
+    }
+  }
+}
+

@@ -37,3 +37,20 @@ footer {
   }
 }
 
+.page-video footer {
+  border-top: 1px solid #DAAF30;
+}
+
+.page-photo footer {
+  border-top: 1px solid #A85663;
+  &, .footer__contacts h1, .footer__contacts small, .footer__copy {
+    color: #FFF;
+  }
+  a {
+    color: #FFF;
+  }
+}
+
+.page-inner footer {
+  margin-top: 60px;
+}

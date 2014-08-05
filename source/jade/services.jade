@@ -1,0 +1,35 @@
+- var active = 1
+- var pageName = 'Услуги'
+include includes/settings
+doctype html
+html(lang='ru').no-js
+  head
+    include includes/head
+  body.page-video.page-inner
+    .page-wrap
+      include includes/header
+      .container.content-nav
+        nav
+          ul
+            li: a(href="#") Главная
+            li: a(href="#") Наши работы
+            li.active: a(href="#") Услуги
+            li: a(href="#") Проекты
+            li: a(href="#") Оборудование
+            li: a(href="#") Контакты
+      main.container
+        h1.wave Услуги
+        div
+          .col-1-2
+            i.icon-camera.icon-large
+            h3 Production
+            p Режиссерская разработка проектов и сценариев<br>Съемки и оформление:<br>— рекламных роликов<br>— презентационных, учебных и корпоративных фильмов,<br>— музыкального видео<br>Съемка рекламы для кинотеатров
+          .col-1-2
+            i.icon-wand.icon-large
+            h3 Postproduction
+            p Компьютерная графика<br>3D анимация<br>Компьютерные спецэффекты<br>Цветокоррекция<br>Адаптация рекламных роликов<br>Компоузинг
+        p Также одной из наших основных задач является съемка художественного видео и юмористических скетчей.
+
+
+      include includes/footer
+    include includes/tail

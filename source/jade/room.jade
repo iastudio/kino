@@ -1,0 +1,99 @@
+- var active = 1
+- var pageName = 'Зал 1'
+include includes/settings
+doctype html
+html(lang='ru').no-js
+  head
+    include includes/head
+  body.page-photo.page-inner
+    .page-wrap
+      include includes/header
+      .container.content-nav
+        nav
+          ul
+            li: a(href="#") Главная
+            li.active: a(href="#") Зал 1
+            li: a(href="#") Зал 2
+            li: a(href="#") Проекты
+            li: a(href="#") Оборудование
+            li: a(href="#") Контакты
+      main.container
+        h1.wave Зал 1
+        p «Фабрика кино» - это компания, которая создана, чтобы снимать кино, чтобы превращать в фильм все, что происходит вокруг нас, показывать историю любого товара или услуги.  Мы превратим в кино все: от слайд-шоу до постановочного ролика. Закажите у нас видеоролик и Вы получите готовый профессиональный продукт, который будет продвигать Ваш бизнес! Сделайте у нас презентационный фильм и в глазах партнеров Вы подниметесь на новую высоту! Доверьте нам изготовление своего корпоративного фильма и Ваши сотрудники почувствуют себя единой командой и будут готовы добиваться новых целей!
+        .gallery
+          .gallery__container
+            a.gallery__item(href="i/placeholders/1-1.jpg", data-lightbox="gallery")
+              img(src="i/placeholders/1-1.jpg")
+            a.gallery__item(href="i/placeholders/1-2.jpg", data-lightbox="gallery")
+              img(src="i/placeholders/1-2.jpg")
+            a.gallery__item(href="i/placeholders/1-3.jpg", data-lightbox="gallery")
+              img(src="i/placeholders/1-3.jpg")
+            a.gallery__item(href="i/placeholders/1-4.jpg", data-lightbox="gallery")
+              img(src="i/placeholders/1-4.jpg")
+          a(href="#") Все фото &rarr;
+        h2 График занятости
+        p Сделайте у нас презентационный фильм и в глазах партнеров Вы подниметесь на новую высоту! Доверьте нам изготовление своего корпоративного фильма и Ваши сотрудники почувствуют себя единой командой и будут готовы добиваться новых целей!
+        .schedule
+          .schedule__info
+            h3 В ближайшие дни Зал1 свободен
+            ul
+              li
+                |&rarr;
+                a(href="#") Заявка на аренду зала 1
+              li
+                |&rarr;
+                a(href="#") Фотосессия в зале 1
+          .schedule__cal
+            table
+              thead
+                tr
+                  td Пн
+                  td Вт
+                  td Ср
+                  td Чт
+                  td Пт
+                  td Сб
+                  td Вс
+              tbody
+                tr
+                  td.empty
+                  td 1
+                  td 2
+                  td.event 3
+                  td 4
+                  td 5
+                  td 6
+                tr
+                  td 7
+                  td 8
+                  td 9
+                  td.event 10
+                  td 11
+                  td.event 12
+                  td 13
+                tr
+                  td 14
+                  td 15
+                  td.event 16
+                  td 17
+                  td.current-day 18
+                  td.event 19
+                  td 20
+                tr
+                  td 21
+                  td 22
+                  td 23
+                  td.event 24
+                  td.event 25
+                  td 26
+                  td 27
+                tr
+                  td 28
+                  td 29
+                  td 30
+                  td 31
+                  td.empty
+                  td.empty
+                  td.empty
+      include includes/footer
+    include includes/tail

@@ -7,12 +7,12 @@
   box-shadow: unquote($shadow);
 }
 
-@mixin perspective-shadow-custom($color, $length){
+@mixin perspective-shadow-custom($color, $length, $after){
   $shadow: '';
   @for $i from 0 to $length - 1 {
     $shadow: $shadow + '0 ' + $i*2 + 'px 0 ' + $i*-1 + 'px ' + $color + ',';
   }
-  $shadow: $shadow + '0 40px 80px -20px rgba(133,138,155,1)';
+  $shadow: $shadow + $after;
   box-shadow: unquote($shadow);
 }
 
