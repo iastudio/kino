@@ -1,5 +1,27 @@
 
-(function(){
+$(function(){
+
+  ///////////////////
+  //    CALENDAR   //
+  ///////////////////
+
+  if ($('#calendar').length > 0) {
+
+    var gCalURL = $('#calendar').attr('data-gcal-src');
+
+    $('#calendar').fullCalendar({
+      events: gCalURL,
+      height: 170,
+      lang: 'ru',
+      eventClick: function(event) {
+        return false;
+      },
+      loading: function(bool) {
+        $('#loading').toggle(bool);
+      }
+    });
+
+  }
 
   /////////////////
   //    SLIDER   //
@@ -175,7 +197,7 @@
 
   });
 
-})();
+});
 
 // 	////////////////////////
 // 	//  PLACEHOLDERS FIX  //
