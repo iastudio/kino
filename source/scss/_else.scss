@@ -202,7 +202,7 @@ h1.wave {
 .schedule {
   .schedule__info {
     @include col(8/12);
-    min-height: 210px;
+    min-height: 315px;
     background-color: #892B3A;
     padding: 28px 19px;
     ul {
@@ -217,63 +217,63 @@ h1.wave {
   }
   .schedule__cal {
     @include col(4/12);
-    min-height: 210px;
-    background-color: #892B3A;
-    padding: 20px 25px;
+    // min-height: 210px;
+    // background-color: #892B3A;
+    // padding: 20px 25px;
 
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
+    // table {
+    //   border-collapse: collapse;
+    //   border-spacing: 0;
 
-      color: #FFF;
+    //   color: #FFF;
 
-      thead {
-        text-transform: uppercase;
-      }
+    //   thead {
+    //     text-transform: uppercase;
+    //   }
 
-      td {
-        display: inline-block;
-        height: 26px;
-        line-height: 26px;
-        text-align: center;
-        width: 33px;
-        padding: 0 8px;
-        cursor: pointer;
+    //   td {
+    //     display: inline-block;
+    //     height: 26px;
+    //     line-height: 26px;
+    //     text-align: center;
+    //     width: 33px;
+    //     padding: 0 8px;
+    //     cursor: pointer;
 
-        margin: 1px;
-      }
+    //     margin: 1px;
+    //   }
 
-      tbody {
+    //   tbody {
 
-        td:hover, .current-day {
-          background-color: #993242;
+    //     td:hover, .current-day {
+    //       background-color: #993242;
 
-          &.empty {
-            background-color: transparent;
-            cursor: default;
-          }
-        }
+    //       &.empty {
+    //         background-color: transparent;
+    //         cursor: default;
+    //       }
+    //     }
 
-        .event {
-          cursor: pointer;
-          position: relative;
+    //     .event {
+    //       cursor: pointer;
+    //       position: relative;
 
-          &:after {
-            background: #FFF;
-            border-radius: 50%;
-            bottom: 0;
-            display: block;
-            content: '';
-            height: 4px;
-            left: 50%;
-            margin-left: 0;
-            position: absolute;
-            width: 4px;
-          }
+    //       &:after {
+    //         background: #FFF;
+    //         border-radius: 50%;
+    //         bottom: 0;
+    //         display: block;
+    //         content: '';
+    //         height: 4px;
+    //         left: 50%;
+    //         margin-left: 0;
+    //         position: absolute;
+    //         width: 4px;
+    //       }
 
-        }
-      }
-    }
+    //     }
+    //   }
+    // }
   }
 }
 

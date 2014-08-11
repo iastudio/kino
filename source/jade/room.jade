@@ -35,7 +35,6 @@ html(lang='ru').no-js
         p Сделайте у нас презентационный фильм и в глазах партнеров Вы подниметесь на новую высоту! Доверьте нам изготовление своего корпоративного фильма и Ваши сотрудники почувствуют себя единой командой и будут готовы добиваться новых целей!
         .schedule
           .schedule__info
-            h3 В ближайшие дни Зал1 свободен
             ul
               li
                 |&rarr;
@@ -44,56 +43,9 @@ html(lang='ru').no-js
                 |&rarr;
                 a(href="#") Фотосессия в зале 1
           .schedule__cal
-            table
-              thead
-                tr
-                  td Пн
-                  td Вт
-                  td Ср
-                  td Чт
-                  td Пт
-                  td Сб
-                  td Вс
-              tbody
-                tr
-                  td.empty
-                  td 1
-                  td 2
-                  td.event 3
-                  td 4
-                  td 5
-                  td 6
-                tr
-                  td 7
-                  td 8
-                  td 9
-                  td.event 10
-                  td 11
-                  td.event 12
-                  td 13
-                tr
-                  td 14
-                  td 15
-                  td.event 16
-                  td 17
-                  td.current-day 18
-                  td.event 19
-                  td 20
-                tr
-                  td 21
-                  td 22
-                  td 23
-                  td.event 24
-                  td.event 25
-                  td 26
-                  td 27
-                tr
-                  td 28
-                  td 29
-                  td 30
-                  td 31
-                  td.empty
-                  td.empty
-                  td.empty
+            .cal-cont
+              #calendar(data-gcal-src="http://www.google.com/calendar/feeds/m1sm5redvm513h2ehfnrfund3k%40group.calendar.google.com/public/basic")
+              #loading
+                i.fa.fa-refresh.fa-spin
       include includes/footer
     include includes/tail
