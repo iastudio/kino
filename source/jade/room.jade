@@ -35,17 +35,24 @@ html(lang='ru').no-js
         p Сделайте у нас презентационный фильм и в глазах партнеров Вы подниметесь на новую высоту! Доверьте нам изготовление своего корпоративного фильма и Ваши сотрудники почувствуют себя единой командой и будут готовы добиваться новых целей!
         .schedule
           .schedule__info
-            ul
-              li
-                |&rarr;
-                a(href="#") Заявка на аренду зала 1
-              li
-                |&rarr;
-                a(href="#") Фотосессия в зале 1
+            p: a.btn(href="#rent-modal", rel="modal:open") Заявка на аренду зала 1
+            p: a.btn(href="#photoset-modal", rel="modal:open") Фотосессия в зале 1
           .schedule__cal
             .cal-cont
               #calendar(data-gcal-src="http://www.google.com/calendar/feeds/m1sm5redvm513h2ehfnrfund3k%40group.calendar.google.com/public/basic")
               #loading
                 i.fa.fa-refresh.fa-spin
       include includes/footer
+      #rent-modal.modal
+        form(id="", method="", action="")
+          input(type="text", placeholder="Имя")
+          input(type="tel", placeholder="Телефон")
+          input(type="email", placeholder="E-mail")
+          input(type="submit", value="Отправить")
+      #photoset-modal.modal
+        form(id="", method="", action="")
+          input(type="text", placeholder="Имя")
+          input(type="tel", placeholder="Телефон")
+          input(type="email", placeholder="E-mail")
+          input(type="submit", value="Отправить")
     include includes/tail

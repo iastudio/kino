@@ -205,15 +205,20 @@ h1.wave {
     min-height: 315px;
     background-color: #892B3A;
     padding: 28px 19px;
-    ul {
-      li {
-        color: #FFF;
-        a {
-          display: inline-block;
-          margin-left: 10px;
-        }
-      }
+
+    .btn {
+      margin-bottom: 0;
+      min-width: 350px;
     }
+    // ul {
+    //   li {
+    //     color: #FFF;
+    //     a {
+    //       display: inline-block;
+    //       margin-left: 10px;
+    //     }
+    //   }
+    // }
   }
   .schedule__cal {
     @include col(4/12);

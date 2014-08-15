@@ -30,10 +30,10 @@
 
 // Placeholder styling mixin
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
 };
 
 @mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
