@@ -21,9 +21,16 @@ $(function(){
   //    CALENDAR   //
   ///////////////////
 
+  var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+
   if ($('#calendar').length > 0) {
 
     var gCalURL = $('#calendar').attr('data-gcal-src');
+
+    $('#daycontent').on('click', function(){
+      $(this).hide();
+      $(this).find('li.event').remove();
+    });
 
     $('#calendar').fullCalendar({
       events: gCalURL,
@@ -34,6 +41,30 @@ $(function(){
       },
       loading: function(bool) {
         $('#loading').toggle(bool);
+      },
+      dayClick: function(date, jsEvent, view) {
+
+        $('#daycontent').show();
+        $('#daycontent .noevents').show();
+
+        var dayName = days[ parseInt( (new Date(date._d)).getDay() ) ];
+        var t = $('#calendar').fullCalendar('clientEvents'); // array w/ all events
+        var clickedDayDate = date._i.substring(0,10); // clicked day date DD-MM-YYYY
+
+        $('#daycontent .daycontent__head h2').html( dayName );
+        $('#daycontent .daycontent__head span').html( clickedDayDate );
+
+        for (var i = 0; i < t.length; ++i) {
+          var currDate = t[i].start._i.substring(0,10); // current event date in format DD-MM-YYYY
+          if (clickedDayDate == currDate) {
+            var startTime = t[i].start._i.substring(11).substring(0,5); // event start time in format HH:MM
+            var endTime = t[i].end._i.substring(11).substring(0,5); // event end time in format HH:MM
+            var itemHTML = '<li class="event">' + startTime + ' – ' + endTime + '<span>Занято</span></li>';
+            $('#daycontent ul').append( itemHTML );
+            $('#daycontent .noevents').hide();
+          }
+        }
+
       }
     });
 
